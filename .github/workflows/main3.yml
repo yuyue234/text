@@ -14,9 +14,7 @@ on:
   # 定时任务，在每天的24点 18点推送签到信息到邮箱
     - cron:  18 18 * * * 
 jobs:
-
-  checkin
-
+  bot:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,6 +24,6 @@ jobs:
       with:
         python-version: 3.9.1
     - name: Checkin
-      run: |
+      run:
         python3 ./main.py 
 
