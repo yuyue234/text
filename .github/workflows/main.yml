@@ -45,7 +45,7 @@ jobs:
        # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
     - name: Checkin
       run: |
-        python3 main.py 
+        python3 ./main.py 
   env: 
   #设置secrets的环境变量
     COOKIE1: ${{ secrets.COOKIE1 }}
@@ -53,6 +53,3 @@ jobs:
     #SMTP: ${{ secrets.SMTP }}
     MAIL1: ${{ secrets.MAIL1 }}
     MAIL2: ${{ secrets.MAIL2 }}
-————————————————
-版权声明：本文为CSDN博主「荒野火狐」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/weixin_56760882/article/details/125571075
