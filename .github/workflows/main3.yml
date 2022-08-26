@@ -25,5 +25,5 @@ jobs:
         python-version: 3.9.1
     - name: Checkin
       run:
-        python3 ./main.py 
+        python ./main.py 
 
