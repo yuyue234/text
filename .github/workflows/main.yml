@@ -1,6 +1,5 @@
 name: 'python action'
 on:
-  push:
   schedule:
     - cron: '40 3 * * *'
 
