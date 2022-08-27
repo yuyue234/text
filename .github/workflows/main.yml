@@ -1,22 +1,16 @@
-name: 'python action1'
-
-on:
-  schedule:
-    - cron: '08 11 * * *'
+name: Greeting from Mona
+on: push
 
 jobs:
-  bot:
+  my-job:
+    name: My Job
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout codes'
-        uses: actions/checkout@v1
-      - name: 'Set up Python 3.7'
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-      - name: 'Install dependencies'
-        run: |
-          python -m pip install --upgrade pip
-          pip install setuptools requests beautifulsoup4 lxml
-      - name: 'sendDingding'
-        run: python ./main.py
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
