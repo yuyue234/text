@@ -1,7 +1,7 @@
 name: 'python action'
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '25 7 * * *'
 jobs:
   bot:
     runs-on: ubuntu-latest
