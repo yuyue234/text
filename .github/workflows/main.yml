@@ -1,5 +1,7 @@
 name: 'python action'
-on: push
+on:
+  schedule:
+    - cron: '35 3 * * *'
 
 jobs:
   bot:
