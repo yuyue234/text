@@ -7,6 +7,11 @@ import sys
 import os
 
 
+# def get_day(yy,mm,dd):
+#     get_month =int(yy*12)
+#     get_day= str((30-dd)+30*(12-mm)+get_month*30)
+#     return  get_day
+
 def get_color():
     # 获取随机颜色
     get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
@@ -94,7 +99,7 @@ def get_ciba():
     return note_ch, note_en
 
 
-def send_message(to_user, access_token, city_name, weather, max_temperature, min_temperature, note_ch, note_en):
+def send_message(to_user, access_token, city_name, weather, max_temperature, min_temperature, note_ch, note_en,text1):
     url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}".format(access_token)
     week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     year = localtime().tm_year
@@ -151,6 +156,14 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
             "note_ch": {
                 "value": note_ch,
                 "color": get_color()
+            },
+            "text1": {
+                "value": text1,
+                "color": get_color()
+            },
+            "day": {
+                "value": day,
+                "color": get_color()
             }
         }
     }
@@ -199,7 +212,13 @@ if __name__ == "__main__":
     weather, max_temperature, min_temperature = get_weather(province, city)
     # 获取词霸每日金句
     note_ch, note_en = get_ciba()
+    #text1
+    text1=config['text1']
+    # yy=config['year']
+    # mm=config['month']
+    # dd=config['day']
+    # day=get_day(yy,mm,dd)
     # 公众号推送消息
     for user in users:
-        send_message(user, accessToken, city, weather, max_temperature, min_temperature, note_ch, note_en)
+        send_message(user, accessToken, city, weather, max_temperature, min_temperature, note_ch, note_en,text1)
     os.system("pause")
