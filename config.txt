@@ -5,9 +5,9 @@
 # 公众号appSecret
 "app_secret": "a8f4655a5d88d64e93d58fecec65e0bf",
 # 模板消息id
-"template_id": "5qEXr13TKajIxIdMx8JvALIhMfHNSp80Qbo4peaD1-Q",
+"template_id": "ShblpF4tQyZubELF8TBKvLQ2Shdamp1FJKsZjcwDu3k",
 # 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
-"user": ["o3y2p5hg3AhrS_lPuWUi5pu9A1Ds","o3y2p5gzkf9-B_3Hmf4KmG3olceM"],
+"user": ["o3y2p5hg3AhrS_lPuWUi5pu9A1Ds",["o3y2p5gzkf9-B_3Hmf4KmG3olceM"],
 
 # 信息配置
 # 所在省份
@@ -21,5 +21,11 @@
 # 生日3
 #"birthday3": "1990-05-01",
 # 在一起的日子，格式同上
-"love_date": "2022-8-11"
+"love_date": "2022-8-11",
+"text1":"夏天注意防晒哦，看到帅哥要扭头，不是跟我出去要穿不露的衣服哦。",
+#你的诞生日
+"year":"2001",
+"month":"3",
+"day":"22"
+
 }
